@@ -1,4 +1,18 @@
 /*
    Import partials below
 */
-@import 'normalize';
+// @import 'normalize';
+@import '_fonts';
+@import '_colors';
+@import 'slider';
+@import 'group-6';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}

@@ -1,0 +1,101 @@
+/*
+   Import partials below
+*/
+
+@font-face {
+  font-family: 'Acrom-Regular';
+  src: url("../fonts/acrom400(Regular).WOFF") format("woff");
+}
+
+@font-face {
+  font-family: 'Acrom-Medium';
+  src: url("../fonts/acrom600(Medium).WOFF") format("woff");
+}
+
+@font-face {
+  font-family: 'Acrom-Bold';
+  src: url("../fonts/acrom800(Bold).WOFF") format("woff");
+}
+
+@font-face {
+  font-family: 'Acrom-ExBold';
+  src: url("../fonts/acrom900(ExB).WOFF") format("woff");
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 384px;
+}
+
+.slider-wrap {
+  width: 304px;
+  height: 185px;
+  padding: 24px 32px 32px 32px;
+  box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.slider-text {
+  padding-top: 20px;
+  font-size: 16px;
+  font-family: 'Acrom-Regular';
+  color: black;
+  line-height: 1.4;
+  position: relative;
+  overflow: auto;
+  max-height: 113px;
+}
+
+.slider-text::before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 8px;
+  height: 8px;
+  background-color: #f1682a;
+}
+
+.slider-btn-left {
+  background: url(../img/left-arrow.png) no-repeat 35% 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  margin-right: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn-left:active {
+  box-shadow: inset 0px 0px 4px black;
+}
+
+.slider-btn-right {
+  background: url(../img/right-arrow.png) no-repeat 65% 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  margin-left: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn-right:active {
+  box-shadow: inset 0px 0px 4px black;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}
