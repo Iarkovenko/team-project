@@ -18,7 +18,7 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 0px;
+$fields: 30px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
@@ -380,15 +380,15 @@ $fields: 0px;
     height: 100vh;
     position: fixed;
     width: 100%;
-
+    
     > div{
         height: inherit;
         @include wrapper();
-
+        
         > div{
             height: inherit;
             @include row-flex();
-
+            
             > div{
                 @include col();
                 @include size(1);
