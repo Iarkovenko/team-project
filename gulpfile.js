@@ -38,8 +38,7 @@ var settings = {
       },
       md: {
           width: '960px',
-          fields: '80px',
-          maxWidth: '400px'
+          fields: '80px'
       },
       sm: {
           width: '768px',
