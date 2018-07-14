@@ -29,7 +29,6 @@ var settings = {
   mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
       maxWidth: '848px', /* max-width оn very large screen */
-      fields: '177px' /* side fields */
   },
   breakPoints: {
       lg: {
