@@ -19,8 +19,6 @@ const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const sequence = require('run-sequence');
-<<<<<<< HEAD
-=======
 const smartgrid = require('smart-grid');
 
 /* It's principal settings in smart grid project */
@@ -40,7 +38,8 @@ var settings = {
       },
       md: {
           width: '960px',
-          fields: '80px'
+          fields: '80px',
+          maxWidth: '400px'
       },
       sm: {
           width: '768px',
@@ -49,7 +48,7 @@ var settings = {
       xs: {
           width: '320px'
       }
-      /* 
+      /*
       We can create any quantity of break points.
 
       some_name: {
@@ -62,7 +61,6 @@ var settings = {
 };
 
 smartgrid('./src/scss/', settings);
->>>>>>> gulp
 
 gulp.task('html', () =>
   gulp
