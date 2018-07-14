@@ -406,15 +406,11 @@ html {
 }
 
 .group-6 {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 8px;
-  margin-right: 8px;
   width: calc(100% - 16px);
   max-width: 848px;
   margin: 0 auto;
-  padding-left: 177px;
-  padding-right: 177px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .group-6__title {
@@ -492,25 +488,4 @@ html {
 
 .slider-btn-right:active {
   box-shadow: inset 0px 0px 4px black;
-}
-
-@media screen and (max-width: 1200px) {
-  .group-6 {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .group-6 {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .group-6 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }

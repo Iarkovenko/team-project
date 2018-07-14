@@ -1,8 +1,8 @@
 // <!-- Insert You'r code DOWN HERE -->
 
 .group-6 {
-//  border: 2px solid red;
-  @include col();
+
+
   @include size(12);
   @include wrapper();
 
@@ -16,5 +16,3 @@
     margin-bottom: 170px;
   }
 }
-
-
