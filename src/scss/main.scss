@@ -21,3 +21,7 @@ html {
 .item {
   @include col();
 }
+
+body {
+  padding-top: 32px;
+}

@@ -1,6 +1,5 @@
 // <!-- Insert You'r code DOWN HERE -->
 .main-nav {
-  @include wrapper;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,7 @@
 }
 
 .contacts {
-  width: 232px;
+  width: 230px;
   display: flex;
   justify-content: space-between;
   font-family: "Acrom-Medium", serif;
@@ -22,6 +21,24 @@
   margin: 0;
   padding: 0;
   align-items: center;
+}
+
+.email {
+  font-family: 'Acrom-Bold';
+  font-size: 10px;
+  color: $dark;
+  // vertical-align: middle;
+
+  & a::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 15px;
+    height: 11px;
+    background: url("/img/envelope.svg");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
 }
 
 .tel {
@@ -33,22 +50,19 @@
   padding: 0;
 }
 
-.tel-item a::before {
-  display: inline-block;
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: url("/img/phone-receiver.svg");
-  background-repeat: no-repeat;
-  margin-right: 3px;
-}
+.tel-item a {
+  font-family: 'Acrom-Bold';
+  font-size: 10px;
+  color: $dark;
 
-.email a::before {
+  &::before {
     display: inline-block;
     content: "";
+    vertical-align: middle;
     width: 8px;
-    height: 8px;
-    background: url("/img/envelope.svg");
+    height: 11px;
+    background: url("/img/phone-receiver.svg");
     background-repeat: no-repeat;
-    margin-right: 3px;
+    margin-right: 4px;
   }
+}
