@@ -1,0 +1,54 @@
+// <!-- Insert You'r code DOWN HERE -->
+.main-nav {
+  @include wrapper;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.main-nav a {
+  text-decoration-line: none;
+  color: $dark;
+}
+
+.contacts {
+  width: 232px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Acrom-Medium", serif;
+  font-size: 10.42px;
+  line-height: 14.58px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.tel {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.tel-item a::before {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: url("/img/phone-receiver.svg");
+  background-repeat: no-repeat;
+  margin-right: 3px;
+}
+
+.email a::before {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: url("/img/envelope.svg");
+    background-repeat: no-repeat;
+    margin-right: 3px;
+  }
