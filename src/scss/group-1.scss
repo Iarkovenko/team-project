@@ -1,1 +1,102 @@
 // <!-- Insert You'r code DOWN HERE -->
+.group-1 {
+  @include wrapper();
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-family: "Acrom-ExBold", sans-serif;
+  font-weight: 900;
+  font-size: 57.5px;
+  color: $dark;
+  margin-bottom: 20px;
+}
+
+.highlighted {
+  background: $dark;
+  color: $white;
+  letter-spacing: -1px;
+}
+
+.about {
+  font-family: "Acrom-Bold", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  color: $dark-grey;
+  position: relative;
+  @include col();
+  @include size(6);
+  margin-left: 100px;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 8px;
+    top: 10px;
+    left: -100px;
+    background: $dark;
+  }
+  margin-bottom: 10px;
+}
+
+.site-desc {
+  display: flex;
+}
+
+.left-img {
+  @include col();
+  @include size(6);
+}
+
+.right-desc-text {
+  @include col();
+  @include size(6);
+}
+
+.desc-title {
+  font-family: "Acrom-ExBold", sans-serif;
+  font-weight: 900;
+  font-size: 37px;
+  color: $dark;
+  margin-bottom: 40px;
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: $dark;
+  }
+}
+
+.desc-main {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: $dark;
+  position: relative;
+  &::after {
+    display: block;
+    content: "goit";
+    font-size: 200px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50px;
+    right: -400px;
+    transform: rotate(90deg);
+	transform-origin: left top 0;
+    color: rgba(0, 0, 0, 0.051);
+    z-index: -1;
+  }
+}
+
+.desc-main p {
+  margin-bottom: 20px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+}

@@ -61,5 +61,5 @@ typings/
 .DS_Store
 
 # not add to remote repo
-#build/
+build/
 
