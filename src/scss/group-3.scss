@@ -1,0 +1,95 @@
+// <!-- start group-3 -->
+.group-3 {
+  @include size(12);
+  @include wrapper();
+  margin-bottom: 160px;
+
+  &__title {
+    font-size: 35.43px;
+    font-family: "Acrom-ExBold";
+    color: $dark;
+    line-height: 1.364;
+    max-width: 519.929px;
+    height: 81.292px;
+    margin-bottom: 41px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__slider {}
+}
+
+.slider-g3 {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+  width: 100%;
+
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 480px;
+    height: 296px;
+    padding: 20px 48px 20px 40px;
+    box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, .2);
+  }
+
+  &-text {
+    font-size: 16px;
+    font-family: 'Acrom-Regular';
+    color: rgb(0, 0, 0);
+    line-height: 1.4;
+    position: relative;
+  }
+
+  &-btn-left {
+    padding: 0;
+    background: url(../img/left-arrow.png) no-repeat 35% 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: 13px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
+    }
+  }
+
+  &-btn-right {
+    padding: 0;
+    align-self: auto;
+    background: url(../img/right-arrow.png) no-repeat 65% 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 13px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
+    }
+  }
+}
+
+.numericSlider {
+  position: absolute;
+  left: -42px;
+  top: 50px;
+  width: 48px;
+  height: 16px;
+  background-color: $orange;
+  transform: rotate(270deg);
+  font-family: 'Acrom-Bold';
+  font-size: 13.3px;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+}
