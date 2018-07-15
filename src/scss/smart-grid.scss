@@ -18,26 +18,15 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
+<<<<<<< HEAD
+$fields: 30px;
+=======
 $fields: 0;
+>>>>>>> dev
 
 @mixin wrapper-full(){
     padding-left: $fields;
     padding-right: $fields;
-
-    @include lg-block(){
-        padding-left: $fields_lg;
-        padding-right: $fields_lg;
-    }
-
-    @include md-block(){
-        padding-left: $fields_md;
-        padding-right: $fields_md;
-    }
-
-    @include sm-block(){
-        padding-left: $fields_sm;
-        padding-right: $fields_sm;
-    }
 }
 
 @mixin row-offsets(){
