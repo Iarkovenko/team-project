@@ -1,12 +1,12 @@
 /*
    Import partials below
 */
-@import 'normalize';
+
 @import '_fonts';
 @import 'mixin';
 @import '_colors';
-@import 'main';
 @import 'smart-grid';
+@import 'main';
 @import 'header';
 @import 'group-1';
 @import 'group-2';
@@ -15,4 +15,3 @@
 @import 'group-4';
 @import 'group-5';
 
-@import 'slider';
