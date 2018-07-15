@@ -23,6 +23,10 @@ class Slider {
   }
 
   createSlider() {
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev
     this.createMarkupForSlider();
     this.sliderControllListener();
     this.setContent();
@@ -44,6 +48,10 @@ class Slider {
 
     const getRightBtn = document.querySelector(`${this.parentNodeString} .js-btn-right`);
     const getLeftBtn = document.querySelector(`${this.parentNodeString} .js-btn-left`);
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev
     getLeftBtn.addEventListener('click', event => this.handlerLeftArr(event));
     getRightBtn.addEventListener('click', event => this.handlerRightArr(event));
 

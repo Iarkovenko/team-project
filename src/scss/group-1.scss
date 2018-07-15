@@ -62,6 +62,7 @@
   font-size: 37px;
   color: $dark;
   margin-bottom: 40px;
+
   &::before {
     display: block;
     content: "";
@@ -77,6 +78,7 @@
   line-height: 25px;
   color: $dark;
   position: relative;
+
   &::after {
     display: block;
     content: "goit";
@@ -87,7 +89,7 @@
     top: 50px;
     right: -400px;
     transform: rotate(90deg);
-	transform-origin: left top 0;
+  	transform-origin: left top 0;
     color: rgba(0, 0, 0, 0.051);
     z-index: -1;
   }
