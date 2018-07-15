@@ -23,6 +23,21 @@ $fields: 0;
 @mixin wrapper-full(){
     padding-left: $fields;
     padding-right: $fields;
+
+    @include lg-block(){
+        padding-left: $fields_lg;
+        padding-right: $fields_lg;
+    }
+
+    @include md-block(){
+        padding-left: $fields_md;
+        padding-right: $fields_md;
+    }
+
+    @include sm-block(){
+        padding-left: $fields_sm;
+        padding-right: $fields_sm;
+    }
 }
 
 @mixin row-offsets(){
@@ -380,15 +395,15 @@ $fields: 0;
     height: 100vh;
     position: fixed;
     width: 100%;
-    
+
     > div{
         height: inherit;
         @include wrapper();
-        
+
         > div{
             height: inherit;
             @include row-flex();
-            
+
             > div{
                 @include col();
                 @include size(1);
