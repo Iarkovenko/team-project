@@ -22,7 +22,7 @@ h2 {
   font-weight: 900;
 }
 
-.text > p {
+.info>p {
   display: flex;
   font-family: "Acrom", sans-serif;
   font-weight: 400;
@@ -31,11 +31,15 @@ h2 {
   margin-top: 30px;
 }
 
-.text > p::before {
+.info>p::before {
   content: "";
   display: block;
   width: 58px;
   height: 10px;
   background-color: rgb(0, 0, 0);
   margin-right: 10px;
+}
+
+.group-2 {
+  margin-bottom: 72px;
 }
