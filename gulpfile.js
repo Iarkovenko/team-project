@@ -29,16 +29,17 @@ var settings = {
   mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
       maxWidth: '848px', /* max-width оn very large screen */
+      fields: 0
   },
   breakPoints: {
       lg: {
           width: '1200px' /* -> @media (max-width: 1100px) */
       },
       md: {
-          width: '960px',
+          width: '960px'
       },
       sm: {
-          width: '768px', /* set fields only if you want to change container.fields */
+          width: '768px' /* set fields only if you want to change container.fields */
       },
       xs: {
           width: '320px'

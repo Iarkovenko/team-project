@@ -16,10 +16,8 @@ html {
 
 .row {
   @include row-flex();
-  overflow: hidden;
 }
 
 .item {
   @include col();
 }
-
