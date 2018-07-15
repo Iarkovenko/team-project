@@ -1,1 +1,50 @@
-// <!-- Insert You'r code DOWN HERE -->
+.group-2 {
+  max-width: 848px;
+  margin: 0 176px 72px 176px;
+}
+
+.row {
+  display: flex;
+}
+
+h2 {
+  max-width: 290px;
+}
+
+.group-2__title {
+  font-family: "Acrom", sans-serif;
+  font-size: 37px;
+  line-height: 50px;
+  font-weight: 900;
+}
+
+.group-2__title--background {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: "Acrom", sans-serif;
+  font-size: 37px;
+  line-height: 50px;
+  font-weight: 900;
+}
+
+.info>p {
+  position: relative;
+  text-align: left;
+  max-width: 300px;
+  max-height: 170px;
+  font-family: "Acrom Medium", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 30px;
+  padding-left: 75px;
+}
+
+.paragraph::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+}
