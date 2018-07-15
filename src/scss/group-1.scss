@@ -3,14 +3,27 @@
   @include wrapper();
   padding: 0;
   margin-bottom: 40px;
+
+  position: relative;
+  &::before {
+    display: block;
+    content: "goit";
+    @include font-mixin("Acrom-ExBold", 183px, $dark);
+    opacity: 0.051;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -38px;
+    right: -184px;
+    transform: rotate(90deg);
+    z-index: -1;
+  }
 }
 
 .page-title {
-  font-family: "Acrom-ExBold", sans-serif;
-  font-weight: 900;
-  font-size: 57.5px;
-  color: $dark;
+  @include font-mixin("Acrom-ExBold", 57.5px, $dark);
   margin-bottom: 20px;
+  line-height: 1.3;
+  margin-bottom: 34px;
 }
 
 .highlighted {
@@ -20,26 +33,21 @@
 }
 
 .about {
-  font-family: "Acrom-Bold", sans-serif;
-  font-weight: 800;
-  font-size: 21px;
-  color: $dark-grey;
+  @include font-mixin("Acrom-Bold", 21px, $dark-grey);
   position: relative;
-  @include col();
-  @include size(6);
-  margin-left: 100px;
-
+  @include size(7);
+  padding-left: 104px;
+  margin-bottom: 58px;
   &::after {
     display: block;
     content: "";
     position: absolute;
     width: 56px;
     height: 8px;
-    top: 10px;
-    left: -100px;
+    top: 4px;
+    left: 0;
     background: $dark;
   }
-  margin-bottom: 10px;
 }
 
 .site-desc {
@@ -61,44 +69,28 @@
   font-weight: 900;
   font-size: 37px;
   color: $dark;
-  margin-bottom: 40px;
-
+  padding-top: 38px;
+  margin-bottom: 25px;
+  position: relative;
   &::before {
+    position: absolute;
     display: block;
     content: "";
     width: 16px;
     height: 16px;
     background: $dark;
+    left: 0;
+    top: 0;
   }
 }
 
 .desc-main {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 17px;
-  line-height: 25px;
   color: $dark;
   position: relative;
-
-  &::after {
-    display: block;
-    content: "goit";
-    font-size: 200px;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50px;
-    right: -400px;
-    transform: rotate(90deg);
-    transform-origin: left top 0;
-    color: rgba(0, 0, 0, 0.051);
-    z-index: -1;
-  }
-}
-
-.desc-main p {
-  margin-bottom: 20px;
-
-  &:nth-last-child(1) {
-    margin-bottom: 0px;
+  line-height: 2;
+  & p:first-child {
+    margin-bottom: 36px;
   }
 }

@@ -1,40 +1,33 @@
 .group-2 {
   max-width: 848px;
-  margin: 0 176px 72px 176px;
+  margin: 0 176px 70px 176px;
 }
-
+.info {
+  padding-top: 46px;
+}
+.info, .picture {
+  @include size(6);
+}
 .row {
   display: flex;
 }
 
-h2 {
-  max-width: 290px;
-}
-
 .group-2__title {
-  font-family: "Acrom", sans-serif;
-  font-size: 37px;
-  line-height: 50px;
-  font-weight: 900;
+  @include font-mixin('Acrom-ExBold', 37px, $dark);
+  line-height: 1.5;
+  max-width: 290px;
+  &--background {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+  }
 }
-
-.group-2__title--background {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  font-family: "Acrom", sans-serif;
-  font-size: 37px;
-  line-height: 50px;
-  font-weight: 900;
-}
-
 .info>p {
   position: relative;
   text-align: left;
-  max-width: 300px;
   max-height: 170px;
-  font-family: "Acrom Medium", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  @include font-mixin('Acrom-Regular', 16.6px, $dark);
+  line-height: 1.4;
   margin-top: 30px;
   padding-left: 75px;
 }
@@ -42,6 +35,7 @@ h2 {
 .paragraph::before {
   position: absolute;
   left: 0;
+  top: 4px;
   content: '';
   display: inline-block;
   width: 60px;
