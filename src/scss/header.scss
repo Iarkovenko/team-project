@@ -15,18 +15,15 @@
   width: 230px;
   display: flex;
   justify-content: space-between;
-  font-family: "Acrom-Medium", serif;
-  font-size: 10.42px;
+  @include font-mixin("Acrom-Medium", 10.42px, $dark);
   line-height: 14.58px;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-.email {
-  font-family: 'Acrom-Bold';
-  font-size: 10px;
-  color: $dark;
+.email, .tel-item a {
+  @include font-mixin("Acrom-Bold", 10px, $dark);
   // vertical-align: middle;
 
   & a::before {
@@ -51,10 +48,6 @@
 }
 
 .tel-item a {
-  font-family: 'Acrom-Bold';
-  font-size: 10px;
-  color: $dark;
-
   &::before {
     display: inline-block;
     content: "";

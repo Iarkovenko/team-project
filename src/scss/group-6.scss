@@ -34,9 +34,7 @@
   }
 
   &-text {
-    font-size: 16px;
-    font-family: 'Acrom-Regular';
-    color: rgb(0, 0, 0);
+    @include font-mixin("Acrom-Regular", 16px, $dark);
     line-height: 1.4;
     position: relative;
 

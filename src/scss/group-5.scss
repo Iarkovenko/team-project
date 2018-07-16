@@ -10,8 +10,7 @@
   padding: 48px 42px 72px 56px;
 
   &__date {
-    font-size: 20px;
-    font-family: "Acrom-ExBold";
+    @include font-mixin("Acrom-ExBold", 20px, $dark);
     text-transform: uppercase;
     line-height: 1.433;
     margin-bottom: 26px;
@@ -19,7 +18,7 @@
 
     &--mark {
       background-color: #000000;
-      color: #ffffff;
+      color: $white;
       padding: 0px 2px;
       margin-right: 8px;
     }
@@ -44,20 +43,16 @@
     }
 
     &--mark {
+      @include font-mixin("Acrom-ExBold", 20px, $white);
       background-color: #000000;
-      color: #ffffff;
       padding: 0px 2px;
-      font-size: 20px;
-      font-family: "Acrom-ExBold";
       text-transform: uppercase;
       line-height: 1.433;
     }
 
     &--text--main--price,
     &--text--stock-price {
-      color: #000000;
-      font-size: 20px;
-      font-family: "Acrom-ExBold";
+      @include font-mixin("Acrom-ExBold", 20px, $dark);
       text-transform: uppercase;
     }
 
@@ -84,9 +79,7 @@
     margin-left: 60px;
 
     &--text {
-      font-size: 23.332px;
-      font-family: "Acrom-Madium";
-      color: $orange;
+      @include font-mixin("Acrom-Medium", 23.332px, $orange);
       line-height: 1.4;
       text-align: left;
       position: relative;
@@ -110,10 +103,8 @@
 .duration,
 .course {
   background-color: #000000;
-  color: #ffffff;
   padding: 0px 2px;
-  font-size: 20px;
-  font-family: "Acrom-ExBold";
+  @include font-mixin("Acrom-ExBold", 20px, $white);
   text-transform: uppercase;
   line-height: 1.433;
 }
@@ -123,9 +114,7 @@
 }
 
 .month {
-  color: #000000;
-  font-size: 20px;
-  font-family: "Acrom-ExBold";
+  @include font-mixin("Acrom-ExBold", 20px, $dark);
   text-transform: uppercase;
 }
 
@@ -142,9 +131,7 @@
   border: none;
   background-color: $orange;
   box-shadow: 0px 9px 13px 0px rgba(184, 93, 39, 0.26);
-  font-size: 14.367px;
-  font-family: "Acrom-ExBold";
-  color: rgb(255, 255, 255);
+  @include font-mixin("Acrom-ExBold", 14.367px, $white);
   text-transform: uppercase;
   line-height: 1.253;
   text-align: center;

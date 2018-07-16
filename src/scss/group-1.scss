@@ -65,10 +65,7 @@
 }
 
 .desc-title {
-  font-family: "Acrom-ExBold", sans-serif;
-  font-weight: 900;
-  font-size: 37px;
-  color: $dark;
+  @include font-mixin("Acrom-ExBold", 37px, $dark);
   padding-top: 38px;
   margin-bottom: 25px;
   position: relative;
@@ -85,9 +82,7 @@
 }
 
 .desc-main {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 17px;
-  color: $dark;
+  @include font-mixin("Acrom-Medium", 17px, $dark);
   position: relative;
   line-height: 2;
   & p:first-child {
