@@ -22,6 +22,23 @@ html {
   @include col();
 }
 
-body {
+.main {
   padding-top: 32px;
+  padding-bottom: 134px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.f-grow-2 {
+  flex-grow: 2;
+}
+
+.align-items-center {
+  align-items: center;
 }

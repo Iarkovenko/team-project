@@ -1,10 +1,8 @@
 // <!-- Insert You'r code DOWN HERE -->
 .group-1 {
-  @include wrapper();
-  padding: 0;
   margin-bottom: 40px;
-
   position: relative;
+
   &::before {
     display: block;
     content: "goit";
@@ -38,6 +36,7 @@
   @include size(7);
   padding-left: 104px;
   margin-bottom: 58px;
+
   &::after {
     display: block;
     content: "";
@@ -55,20 +54,20 @@
 }
 
 .left-img {
-  @include col();
   @include size(6);
 }
 
 .right-desc-text {
-  @include col();
   @include size(6);
+  margin-left: 16px;
 }
 
 .desc-title {
   @include font-mixin("Acrom-ExBold", 37px, $dark);
   padding-top: 38px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   position: relative;
+
   &::before {
     position: absolute;
     display: block;
@@ -82,10 +81,12 @@
 }
 
 .desc-main {
-  @include font-mixin("Acrom-Medium", 17px, $dark);
-  position: relative;
-  line-height: 2;
-  & p:first-child {
-    margin-bottom: 36px;
+  &__parag {
+    @include font-mixin('Acrom-Regular', 17px, $dark);
+    line-height: 1.4;
+
+    &:first-child {
+      margin-bottom: 34px;
+    }
   }
 }

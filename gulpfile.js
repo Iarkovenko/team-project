@@ -56,7 +56,7 @@ var settings = {
   }
 };
 
-smartgrid('./src/scss/', settings);
+smartgrid('./src/scss/libs/', settings);
 
 gulp.task('html', () =>
   gulp
