@@ -20,9 +20,10 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const sequence = require('run-sequence');
 const smartgrid = require('smart-grid');
+const ghPages = require('gulp-gh-pages');
 
 /* It's principal settings in smart grid project */
-var settings = {
+const settings = {
   outputStyle: 'scss', /* less || scss || sass || styl */
   columns: 12, /* number of grid columns */
   offset: '16px', /* gutter width px || % || rem */
@@ -89,6 +90,24 @@ gulp.task('styles', () =>
     .pipe(browserSync.stream()),
 );
 
+gulp.task('dep-styles', () =>
+  gulp
+    .src('./src/scss/styles.scss')
+    .pipe(plumber())
+    .pipe(
+      stylelint({
+        reporters: [{ formatter: 'string', console: true }],
+      }),
+    )
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gcmq())
+    .pipe(gulp.dest('./build/css'))
+    .pipe(cssnano())
+    .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('./build/css')),
+);
+
 gulp.task('scripts', () =>
   gulp
     .src('./src/js/**/*.js')
@@ -99,7 +118,20 @@ gulp.task('scripts', () =>
       }),
     )
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(uglify())
+    .pipe(rename('scripts.min.js'))
+    .pipe(gulp.dest('./build/js')),
+);
+
+gulp.task('dep-scripts', () =>
+  gulp
+    .src('./src/js/**/*.js')
+    .pipe(plumber())
+    .pipe(
+      babel({
+        presets: ['env'],
+      }),
+    )
     .pipe(uglify())
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('./build/js')),
@@ -172,4 +204,24 @@ gulp.task('build', cb =>
   ),
 );
 
+gulp.task('dep-build', go =>
+  sequence(
+    'del:build',
+    'svg-sprite',
+    'images',
+    'fonts',
+    'dep-styles',
+    'html',
+    'dep-scripts',
+    go,
+  ),
+);
+
 gulp.task('start', cb => sequence('build', 'serve', 'watch'));
+
+gulp.task('deploy', () => {
+  gulp.src('./dist/**/*')
+  .pipe(ghPages([options.branch = 'master']));
+});
+
+gulp.task('push-to-git', go => sequence('dep-build', 'deploy'));

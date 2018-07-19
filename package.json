@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "push-to-git": "gulp push-to-git",
     "prepare": "gulp prepare",
     "start": "gulp start",
     "build": "gulp build",
@@ -12,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axZerk/gulp-starter-kit.git"
+    "url": "git+https://github.com/Iarkovenko/team-project.git"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "TeamProject",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/axZerk/gulp-starter-kit/issues"
   },
-  "homepage": "https://github.com/axZerk/gulp-starter-kit#readme",
+  "homepage": "https://iarkovenko.github.io/team-project/",
   "devDependencies": {
     "autoprefixer": "^8.6.5",
     "babel-core": "^6.26.3",
@@ -30,6 +31,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
