@@ -220,8 +220,8 @@ gulp.task('dep-build', go =>
 gulp.task('start', cb => sequence('build', 'serve', 'watch'));
 
 gulp.task('deploy', () => {
-  gulp.src('./dist/**/*')
-  .pipe(ghPages([options.branch = 'master']));
+  gulp.src('./build/**/*')
+  .pipe(ghPages());
 });
 
 gulp.task('push-to-git', go => sequence('dep-build', 'deploy'));
