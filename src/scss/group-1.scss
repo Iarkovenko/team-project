@@ -14,6 +14,7 @@
     right: -184px;
     transform: rotate(90deg);
     z-index: -1;
+    @include xs('bottom', 86px);
   }
 }
 
@@ -22,6 +23,7 @@
   margin-bottom: 20px;
   line-height: 1.3;
   margin-bottom: 34px;
+  @include xs('font-size', 33px);
 }
 
 .highlighted {
@@ -33,10 +35,12 @@
 .about {
   @include font-mixin("Acrom-Bold", 21px, $dark-grey);
   position: relative;
-  @include size(7);
+  max-width: 465px;
   padding-left: 104px;
   margin-bottom: 58px;
-
+  @include xs('font-size', 14px);
+  @include xs('margin-bottom', 25px);
+  @include xs('padding-left', 60px);
   &::after {
     display: block;
     content: "";
@@ -46,19 +50,31 @@
     top: 4px;
     left: 0;
     background: $dark;
+    @include xs('width', 40px);
+    @include xs('height', 4px);
+
   }
 }
 
 .site-desc {
   display: flex;
+  @include xs('flex-wrap', wrap);
 }
 
 .left-img {
-  @include size(6);
+  min-width: 416px;
+  min-height: 513px;
+  @include xs('max-height', 150px);
+  @include xs('margin-bottom', 10px);
+  overflow: hidden;
+
+  & > img {
+    @include xs('transform', translateY(-25%));
+  }
 }
 
 .right-desc-text {
-  @include size(6);
+
   margin-left: 16px;
 }
 
@@ -67,6 +83,8 @@
   padding-top: 38px;
   margin-bottom: 24px;
   position: relative;
+  @include xs('font-size', 25px);
+  @include xs('margin-bottom', 10px);
 
   &::before {
     position: absolute;
@@ -83,6 +101,7 @@
 .desc-main {
   &__parag {
     @include font-mixin('Acrom-Regular', 17px, $dark);
+    @include xs('font-size', 14px);
     line-height: 1.4;
 
     &:first-child {

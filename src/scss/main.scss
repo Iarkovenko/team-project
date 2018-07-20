@@ -14,17 +14,11 @@ html {
   @include wrapper();
 }
 
-.row {
-  @include row-flex();
-}
-
-.item {
-  @include col();
-}
-
 .main {
   padding-top: 32px;
   padding-bottom: 134px;
+  @include xs('max-width', 320px);
+  @include xs('padding', 10px 10px 30px 10px);
 }
 
 .d-flex {
