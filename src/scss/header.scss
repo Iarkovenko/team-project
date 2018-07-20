@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 70px;
+  @include xs('margin-bottom', 20px);
 }
 
 .main-nav a {
@@ -12,7 +13,7 @@
 }
 
 .contacts {
-  width: 230px;
+  min-width: 230px;
   display: flex;
   justify-content: space-between;
   @include font-mixin("Acrom-Medium", 10.42px, $dark);
@@ -20,11 +21,13 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  @include xs('font-size', 7px);
+  @include xs('min-width', 160px);
 }
 
 .email, .tel-item a {
   @include font-mixin("Acrom-Bold", 10px, $dark);
-  // vertical-align: middle;
+  @include xs('font-size', 7px);
 
   & a::before {
     display: inline-block;

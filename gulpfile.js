@@ -34,7 +34,7 @@ const settings = {
   },
   breakPoints: {
       lg: {
-          width: '1200px' /* -> @media (max-width: 1100px) */
+          width: '1024px' /* -> @media (max-width: 1100px) */
       },
       md: {
           width: '960px'
@@ -43,7 +43,7 @@ const settings = {
           width: '768px' /* set fields only if you want to change container.fields */
       },
       xs: {
-          width: '320px'
+          width: '480px'
       }
       /*
       We can create any quantity of break points.

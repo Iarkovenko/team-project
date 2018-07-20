@@ -1,6 +1,7 @@
 // <!-- Insert You'r code DOWN HERE -->
 .group-4 {
   position: relative;
+  margin-bottom: 70px;
 
   &::before {
     position: absolute;
@@ -8,9 +9,18 @@
     @include font-mixin("Acrom-ExBold", 183px, $dark);
     text-transform: uppercase;
     transform: rotate(90deg);
-    left: 223px;
-    top: 300px;
+    left: 20%;
+    top: 18%;
     opacity: 0.051;
+    line-height: 0.7;
+    @include xs('left', -82%);
+    @include xs('top', 10%);
+    @include xs('font-size', 150px);
+    @include sm('left', -36%);
+    @include sm('top', 13%);
+    @include sm('font-size', 177px);
+    @include md('left', 12%);
+    @include md('top', 14%);
   }
 }
 
@@ -18,11 +28,18 @@
   &__title {
     display: inline-block;
     @include font-mixin("Acrom-ExBold", 57.5px, $white);
-    background-color: $dark;
     margin-bottom: 55px;
+    @include xs('font-size', 35px);
+
+    &--bgc {
+      background-color: $dark;
+      color: $white;
+    }
   }
 
   &__list {
+    display: flex;
+    flex-wrap: wrap;
     counter-reset: b;
     position: relative;
   }
@@ -36,6 +53,7 @@
     margin-bottom: 16px;
     position: relative;
     overflow: hidden;
+
     &::before {
       @include font-mixin("Acrom-ExBold", 37.5px, $dark);
       position: absolute;
@@ -55,11 +73,11 @@
 }
 
 .header {
-
   &--item {
     margin-bottom: 20px;
     position: relative;
   }
+
   &::before {
     position: absolute;
     content: "";

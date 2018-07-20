@@ -1,9 +1,6 @@
-.group-5 {
-  margin-bottom: 56px;
-}
-
 .inform {
-  width: 416px;
+  max-width: 416px;
+  min-width: 300px;
   height: 305px;
   box-shadow: -5.2px 6px 16.8px 4.2px rgba(0, 0, 0, 0.11);
   background-color: #ffffff;
@@ -14,6 +11,7 @@
   align-items: center;
   padding-top: 48px;
   padding-bottom: 56px;
+  margin-bottom: 56px;
 
   &__item {
     width: 100%;
@@ -145,6 +143,7 @@
   height: 48px;
   margin: auto;
   transition-duration: 1s;
+  @include xs('width', 280px);
 }
 
 .button-submit:hover {
