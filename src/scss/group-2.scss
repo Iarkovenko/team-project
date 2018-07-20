@@ -2,6 +2,8 @@
   display: flex;
   margin-bottom: 68px;
   @include xs('margin-bottom', 30px);
+  @include sm('margin-bottom', 20px);
+  @include sm('flex-wrap', wrap);
 }
 
 .info {
@@ -53,5 +55,5 @@
 .picture {
   max-width: 50%;
   @include xs('display', none);
-
+  @include sm('margin', auto);
 }

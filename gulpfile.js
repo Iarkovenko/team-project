@@ -37,13 +37,13 @@ const settings = {
           width: '1024px' /* -> @media (max-width: 1100px) */
       },
       md: {
-          width: '768px'
+          width: '960px'
       },
       sm: {
-          width: '480px' /* set fields only if you want to change container.fields */
+          width: '768px' /* set fields only if you want to change container.fields */
       },
       xs: {
-          width: '320px'
+          width: '480px'
       }
       /*
       We can create any quantity of break points.

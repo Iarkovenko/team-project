@@ -9,12 +9,18 @@
     @include font-mixin("Acrom-ExBold", 183px, $dark);
     text-transform: uppercase;
     transform: rotate(90deg);
-    left: 23%;
+    left: 20%;
     top: 18%;
     opacity: 0.051;
     line-height: 0.7;
-    @include xs('left', -112%);
-    @include xs('top', 13%);
+    @include xs('left', -82%);
+    @include xs('top', 10%);
+    @include xs('font-size', 150px);
+    @include sm('left', -36%);
+    @include sm('top', 13%);
+    @include sm('font-size', 177px);
+    @include md('left', 12%);
+    @include md('top', 14%);
   }
 }
 
@@ -47,6 +53,7 @@
     margin-bottom: 16px;
     position: relative;
     overflow: hidden;
+
     &::before {
       @include font-mixin("Acrom-ExBold", 37.5px, $dark);
       position: absolute;
@@ -66,11 +73,11 @@
 }
 
 .header {
-
   &--item {
     margin-bottom: 20px;
     position: relative;
   }
+
   &::before {
     position: absolute;
     content: "";
